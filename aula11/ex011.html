@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração Brasileira</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font: normal 20pt Arial;
+            color: black;
+        }
+        h1{
+            font: italic bolder 40pt Arial;
+            color: brown;
+        }
+        input{
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    Escreva o nome seu país de origem:  <input type="text" name="txtname" id="txtname">
+    <input type="button" value="Verificar" onclick="verificarPais()">
+
+    <div id="resposta"> </div>
+
+    <script>
+        function verificarPais(){
+            var pais = window.document.querySelector('input#txtname')
+            var res = document.querySelector('div#resposta')
+ 
+            if (pais.value == "Brasil"){
+                res.innerHTML += '<p>Bem vindo de volta ao Brasil!</p>'
+            } else {
+                res.innerHTML += `<p>Bem vindo! Esperamos que goste do nosso maravilhoso país assim como ${pais.value}.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
